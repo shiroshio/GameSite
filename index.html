@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        @font-face{
+            font-family:'Lightda';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/Li.eot');
+            src: url('./fonts/Li.eot?#iefix') format('embedded-opentype'),
+                 url('./fonts/Li.woff') format('woff');
+        }
+
+
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Define basic styles */
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+        }
+
+        header {
+          background-color: #000;
+          color: #fff;
+          padding: 20px;
+        }
+
+        nav ul {
+          list-style-type: none;
+        }
+
+        nav li {
+          display: inline;
+          margin-right: 10px;
+        }
+
+        .hero {
+          text-align: center;
+          padding: 100px;
+          background-color: #f8f8f8;
+        }
+
+        .content {
+          padding: 40px;
+        }
+
+        form input, textarea, button {
+          display: block;
+          margin-bottom: 10px;
+          width: 100%;
+          padding: 10px;
+        }
+
+        footer {
+          background-color: #000;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+          position: relative;
+          height: 30px;
+          transform: translateY(-100%);
+        }
+
+        .wrapper {
+
+        }
+
+    </style>
+</head>
+<body style="font-family: Lightda;">
+    <header>
+        <h1>20307보고서</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="hero">
+            <h2>Reports</h2>
+            <p>보고서 정리에 유용한 웹 사이트</p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="content">
+            <h2>보고서 정리본 사이트</h2>
+            <p>문학, 주제탐구, 수학과제, 개인탐구 등등의 보고서를 정리해놓은 개인 사이트입니다.</p>
+        </div>
+    </section>
+    <section id="services">
+        <div class="content">
+            <h2>창의주제탐구 보고서</h2>
+            <ul>
+                <li><a href="./MainPages/mainPage1.html">정렬 알고리즘의 개선방안의 대한 고찰</a></li>
+                <li>미완(미공사중)</li>
+                <li>미완(미공사중)</li>
+            </ul>
+        </div>
+    </section>
+    <footer style="bottom: 0;">
+        <p>&copy; 2023/04/08 by WooMin. All rights reserved.</p>
+    </footer>
+</body>
+</html>
