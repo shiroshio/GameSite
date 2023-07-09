@@ -181,7 +181,7 @@
 		    					<br> - 경사 하강법의 손실 함수의 기울기 계산에 전체 학습 데이터셋의 크기와 동일하게 잡는 방법으로 경사 하강법의 대상이 배치 크기와 동일하다는 것이다. 단점으로 데이터셋 모두를 대상으로 하므로 파라미터가 한번 이동할 때마다 계산해야 할 값이 지나치게 많아 시간복잡도와 공갑복잡도 둘 모두 높다.
 		    					<br> - 특징은 모든 데이터를 대상으로 경사 하강법을 실시하므로 안정적으로 수렴한다. 그러므로 수렴까지 발생하는 파라미터의 수는 적다. 안정적으로 움직이기 때문에 local minimum문제에 빠질 수 있다. 학습 데이터셋이 커지면 배치 크기도 커지기 때문에 리소스 소모가 매우 크다.
 		    					<br>
-		    					<img src="./images/Batch.png"; alt="배치 경사 하강법 시각화 자료"; style="width: 40%;">
+		    					<img src="../images/Batch.png"; alt="배치 경사 하강법 시각화 자료"; style="width: 40%;">
 		    				</p>
 		    			</li>
 		    			<li>
@@ -197,7 +197,7 @@
 		    					<br>- 무작위로 뽑아낸 샘플에 대해서만 경사를 구하므로 배치 경사 하강법보다 불안정하게 움직인다.
 		    					<br>- global minimum에 정확히 도달하지 못 할 가능성이 있다. 하지만, 이 경사하강법은 불안정하기 때문에 local minimum에 빠진 다 할 지라도 쉽게 빠져 나올 수가 있어 global minimum에 더 근접한다.
 		    					<br>
-		    					<img src="./images/S.png" alt=".." style="width: 40%;">
+		    					<img src="../images/S.png" alt=".." style="width: 40%;">
 		    				</p>
 		    			</li>
 		    			<li>
@@ -208,7 +208,7 @@
 		    					<br>- 미니 배치 크기를 줄였기 때문에 파라미터 수가 확률적 경사 하강법보다 줄어들고 안정적으로 변한다. 그러므로 빠르게 최적해에 가까이 갈 수 있지만, local minimum이 확률적 경사하강법보다 상대적으로 빠지기 쉽다.
 		    					<br>- 미니 배치는 학습 데이터셋의 크기를 배치 크기만큼 나누었을 때, 딱 떨어지는 크기가 좋은 학습 데이터로 사용될 수 있다, 왜냐하면, 남은 몇 개가 있다면 그 데이터를 과평가할 수 있기 때문이다.
 		    					<br>
-		    					<img src="./images/SGD.png" style="width: 40%">
+		    					<img src="../images/SGD.png" style="width: 40%">
 		    				</p>
 		    			</li>
 		    		</ol>
@@ -223,33 +223,33 @@
 		    				<p style="margin-bottom: 10px;"> 
 		    					Python 코드는 다음과 같다.
 		    				</p>
-		    				<img src="./images/python1.png" style="width: 40%">
+		    				<img src="../images/python1.png" style="width: 40%">
 		    				<p style="margin-top: 20px;">
 		    					위 결과는 다음과 같고, 이 결과는 학습률에 따른 예측 직선과 잘 예측함을 보여준다.
 		    				</p> 
-		    				<img src="./images/Figure_1.png" style="width: 40%">
+		    				<img src="../images/Figure_1.png" style="width: 40%">
 		    			</li>
 		    			<li>
 		    				<h1 style="font-size: 18px;">확률적 경사 하강법(SGD)</h1>
 		    				<p style="margin-bottom: 10px;"> 
 		    					Python 코드는 다음과 같다.
 		    				</p>
-		    				<img src="./images/python2.png" style="width: 40%">
+		    				<img src="../images/python2.png" style="width: 40%">
 		    				<p style="margin-top: 20px;">
 		    					위 결과는 다음과 같고, 결과적으로 SGD 또한 잘 예측함을 보여준다.
 		    				</p> 
-		    				<img src="./images/Figure_2.png" style="width: 40%">
+		    				<img src="../images/Figure_2.png" style="width: 40%">
 		    			</li>
 		    			<li>
 		    				<h1 style="font-size: 18px;">미니 배치 경사 하강법(SGD)</h1>
 		    				<p style="margin-bottom: 10px;"> 
 		    					Python 코드는 다음과 같다.
 		    				</p>
-		    				<img src="./images/python3.png" style="width: 40%">
+		    				<img src="../images/python3.png" style="width: 40%">
 		    				<p style="margin-top: 20px;">
 		    					위 결과는 다음과 같고, 결과적으로 미니 배치 경사 하강법 또한 잘 예측함을 보여준다.
 		    				</p> 
-		    				<img src="./images/Figure_3.png" style="width: 40%">
+		    				<img src="../images/Figure_3.png" style="width: 40%">
 		    			</li>
 		    		</ol>
 		    	</div>
