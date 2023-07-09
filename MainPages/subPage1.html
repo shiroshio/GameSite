@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Website(Report(1))</title>
+    <script src="script.js"></script>
+    <style>
+        @font-face {
+            font-family:'Lightda';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/Li.eot');
+            src: url('./fonts/Li.eot?#iefix') format('embedded-opentype'),
+                 url('./fonts/Li.woff') format('woff');
+        }
+
+        @font-face {
+        	font-family: 'paper';
+        	font-style: normal;
+        	font-weight: 200;
+        	src: url('./fonts/paper.eot');
+        	src: url('./fonts/paper.eot?#iefix') format('embedded-opentype'),
+        		 url('./fonts/paper.woff') format('woff');
+        }
+
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Define basic styles */
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+        }
+
+        header {
+          background-color: #000;
+          color: #fff;
+          padding: 20px;
+        }
+
+        nav ul {
+          list-style-type: none;
+        }
+
+        nav li {
+          display: inline;
+          margin-right: 10px;
+        }
+
+        .htitle {
+        	text-align: center;
+        	padding: 40px;
+        	background-color: #f8f8f8;
+        }
+
+        .hero {
+          text-align: center;
+          padding: 80px;
+          background-color: #e0e0e0;
+        }
+
+        .content {
+          padding: 40px;
+        }
+
+        .container {
+        	display: flex;
+        }
+
+        .left-column {
+        	flex: 1;
+        	padding: 20px;
+        	background-color: #f2f2f2;
+        	border-style: solid;
+        	border-color: black;
+        }
+
+        .right-column {
+        	flex: 1;
+        	padding: 20px;
+        	background-color: #f2f2f2;
+        	border-style: solid;
+        	border-color: black;
+        }
+
+        .bor {
+        	border-style: solid;
+        	border-color: black;
+        }
+
+        form input, textarea, button {
+          display: block;
+          margin-bottom: 10px;
+          width: 100%;
+          padding: 10px;
+        }
+
+        footer {
+          background-color: #000;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+        }
+    </style>
+</head>
+<body style="font-family: 'Lightda';">
+    <header>
+        <h1 style="color: blue">20307 report</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+	    <section>
+	    	<div class="hero">
+	    		<h1 style="font-size: 41px">경사 하강법의 종류와 비교</h1>
+	    		<h1 style="font-size: 20px"></h1>
+	    	</div>
+	    </section>
+	    <section>
+	    	<div class="container">
+	    		<div class="right-column">
+	    			<ul>
+	    				<li><h1>목차</h1></li>
+	    				<li><h3>1. 선형 회귀란?</h3></li>
+
+	    				<li><h3>2. 여러가지 경사 하강법</h3></li>
+	    					<p style="margin-right: 20px;">- 2.1 정규 방정식과 유사 역행렬</p>
+	    					<p style="margin-right: 20px;">- 2.2 배치 경사 하강법</p>
+	    					<p style="margin-right: 20px;">- 2.3 확률적 배치 경사 하강법</p>
+	    					<p style="margin-right: 20px;">- 2.4 미니 배치 경사 하강법</p>
+	    				<li><h3>3. Python 코드 및 실행 결과</h3></li>
+	    					<p style="margin-right: 20px;">- 3.1 배치 경사 하강법</p>
+	    					<p style="margin-right: 20px;">- 3.2 확률적 배치 경사 하강법</p>
+	    					<p style="margin-right: 20px;">- 3.3 미니 배치 경사 하강법</p>
+	    				<li><h3>4. 몰?루</h3></li>
+	    				<li><h3>5. 참고 문헌</h3></li>
+	    			</ul>
+	    			</p>
+	    		</div>
+	    	</div>
+	    </section>
+	    <div style="border-style: solid;border-color: black;">
+		    <section>
+		    	<div class="content">
+		    		<ul><li><h3 style="font-size: 30px;">선형 회귀란?</h3></li></ul>
+		    	</div>
+		    </section>
+		    <section>
+		    	<div class="content">
+		    	</div>
+		    </section>
+		    <section>
+		    	<div class="content">
+		    		<ul><li><h3 style="font-size: 30px;">여러가지 경사하강법</h3></li></ul>
+		    		<ol>
+		    			<li>
+		    				<h1 style="font-size: 18px;">정규 방정식과 유사 역행렬</h1>
+		    				<p style="margin-bottom: 10px;">
+		    					- 정규방정식(Normal equation)<br>
+		    					: 식으로 표현하면 다음과 같다. <br>
+		    					θ = (X^T * X)^(-1) * X^T * y <br>
+		    					여기서, θ : 가중치 매개변수 벡터(회귀 계수), X : 입력 행렬 (샘플 x특성의 크기) y: 예측하려는 목표 변수의 벡터, X^T: X의 전치 행렬, (X^T * X)^(-1): 역행렬을 구한 결과를 사용하여 회귀 계수를 구하여 그를 활용하여 일차방정식의 형태로 표현하는 것이다.
+		    				</p>
+		    				<p style="margin-bottom: 50px;">
+		    					- 유사 역행렬(pseudo-inverse) <br>
+		    					: 유사 역행렬의 개념을 사용하여 본래 정규방정식에서 입력 행렬의 역행렬이 존재하지 않을때 계산할 수 있게 한다.
+		    				</p>
+		    			</li>		    			
+		    			<li>
+		    				<h1 style="font-size: 18px">배치 경사 하강법</h3>
+		    				<p style="margin-bottom: 50px;">
+		    					- 배치 경사 하강법(Batch Gradient Descent, BGD)
+		    					<br>: 알고리즘의 목표인 손실 함수를 최적화 시키는 것이기 때문에 최적의 가중치를 찾아야 하는데 가중치를 학습률과 그 전 가중치를 이용하여 구하는 아이디어이다. 식은 다음과 같다.
+		    					<br> w_{n} = w_{n-1} - α∇f(w_{n-1})
+		    					<br> - 경사 하강법의 손실 함수의 기울기 계산에 전체 학습 데이터셋의 크기와 동일하게 잡는 방법으로 경사 하강법의 대상이 배치 크기와 동일하다는 것이다. 단점으로 데이터셋 모두를 대상으로 하므로 파라미터가 한번 이동할 때마다 계산해야 할 값이 지나치게 많아 시간복잡도와 공갑복잡도 둘 모두 높다.
+		    					<br> - 특징은 모든 데이터를 대상으로 경사 하강법을 실시하므로 안정적으로 수렴한다. 그러므로 수렴까지 발생하는 파라미터의 수는 적다. 안정적으로 움직이기 때문에 local minimum문제에 빠질 수 있다. 학습 데이터셋이 커지면 배치 크기도 커지기 때문에 리소스 소모가 매우 크다.
+		    					<br>
+		    					<img src="./images/Batch.png"; alt="배치 경사 하강법 시각화 자료"; style="width: 40%;">
+		    				</p>
+		    			</li>
+		    			<li>
+		    				<h1 style="font-size: 18px">확률적 배치 경사 하강법</h1>
+		    				<p style="margin-bottom: 50px;">
+		    					- 확률적 배치 경사 하강법(Stochastic Gradient Descent, SGD)
+		    					<br>: 학습 데이터셋에서 무작위로 한 개의 샘플 데이터셋을 추출하고, 그 샘플에 대해서만 배치 경사 하강법를 계산하는 방법이다.
+		    					<br>- 확률적 경사 하강법은 확률적 알고리즘을 사용한 방법이다. 확률적 알고리즘의 예로는 밀러-라빈 소수판별 알고리즘이 있다.
+		    					<br>- 전체 학습 데이터셋을 대상으로 하고 학습하는 것과 local minimum에 빠지기 쉬운 것을 개선하기 위해 만들어진 것이다
+		    					<br>- 학습 데이터셋에서 무작위로 한 개의 샘플 데이터셋을 추출하고, 그 샘플에 대해서만 기울기를 계산하는 방법이다.
+		    					<br>- 샘플 데이터셋에 대해서만 기울기(Gradient)를 계산하므로, 매 반복에서 다뤄야 할 데이터 수가 적어 학습 속도가 빠르다.
+		    					<br>- 하나의 샘플로만 계산하기에 공강복잡도가 낮고, 매우 큰 데이터셋 또한 배치 경사 하강법보다 훨씬 쉽게 학습 가능하다.
+		    					<br>- 무작위로 뽑아낸 샘플에 대해서만 경사를 구하므로 배치 경사 하강법보다 불안정하게 움직인다.
+		    					<br>- global minimum에 정확히 도달하지 못 할 가능성이 있다. 하지만, 이 경사하강법은 불안정하기 때문에 local minimum에 빠진 다 할 지라도 쉽게 빠져 나올 수가 있어 global minimum에 더 근접한다.
+		    					<br>
+		    					<img src="./images/S.png" alt=".." style="width: 40%;">
+		    				</p>
+		    			</li>
+		    			<li>
+		    				<h1 style="font-size: 18px;">미니 배치 경사 하강법</h1>
+		    				<p style="margin-bottom: 50px;">
+		    					- 미니 배치 경사 하강법(mini Batch gradient descent, SGD)
+		    					<br>: 미니 배치 경사 하강법은 BGD와 SGD의 장점을 조합하여 만든 것으로 미니 배치를 생성하여 그 미니 배치에 배치 경사 하강법으로 계산하는 방법이다.
+		    					<br>- 미니 배치 크기를 줄였기 때문에 파라미터 수가 확률적 경사 하강법보다 줄어들고 안정적으로 변한다. 그러므로 빠르게 최적해에 가까이 갈 수 있지만, local minimum이 확률적 경사하강법보다 상대적으로 빠지기 쉽다.
+		    					<br>- 미니 배치는 학습 데이터셋의 크기를 배치 크기만큼 나누었을 때, 딱 떨어지는 크기가 좋은 학습 데이터로 사용될 수 있다, 왜냐하면, 남은 몇 개가 있다면 그 데이터를 과평가할 수 있기 때문이다.
+		    					<br>
+		    					<img src="./images/SGD.png" style="width: 40%">
+		    				</p>
+		    			</li>
+		    		</ol>
+		    	</div>
+		    </section>
+		    <section>
+		    	<div class="content">
+		    		<ul><li><h3 style="font-size: 30px">Python 코드 및 실행 결과</h3></li></ul>
+		    		<ol>
+		    			<li>
+		    				<h1 style="font-size: 18px">배치 경사 하강법(BGD)</h1>
+		    				<p style="margin-bottom: 10px;"> 
+		    					Python 코드는 다음과 같다.
+		    				</p>
+		    				<img src="./images/python1.png" style="width: 40%">
+		    				<p style="margin-top: 20px;">
+		    					위 결과는 다음과 같고, 이 결과는 학습률에 따른 예측 직선과 잘 예측함을 보여준다.
+		    				</p> 
+		    				<img src="./images/Figure_1.png" style="width: 40%">
+		    			</li>
+		    			<li>
+		    				<h1 style="font-size: 18px;">확률적 경사 하강법(SGD)</h1>
+		    				<p style="margin-bottom: 10px;"> 
+		    					Python 코드는 다음과 같다.
+		    				</p>
+		    				<img src="./images/python2.png" style="width: 40%">
+		    				<p style="margin-top: 20px;">
+		    					위 결과는 다음과 같고, 결과적으로 SGD 또한 잘 예측함을 보여준다.
+		    				</p> 
+		    				<img src="./images/Figure_2.png" style="width: 40%">
+		    			</li>
+		    			<li>
+		    				<h1 style="font-size: 18px;">미니 배치 경사 하강법(SGD)</h1>
+		    				<p style="margin-bottom: 10px;"> 
+		    					Python 코드는 다음과 같다.
+		    				</p>
+		    				<img src="./images/python3.png" style="width: 40%">
+		    				<p style="margin-top: 20px;">
+		    					위 결과는 다음과 같고, 결과적으로 미니 배치 경사 하강법 또한 잘 예측함을 보여준다.
+		    				</p> 
+		    				<img src="./images/Figure_3.png" style="width: 40%">
+		    			</li>
+		    		</ol>
+		    	</div>
+		    </section>
+		</div>
+		<div class="bor">
+			<section>
+				<div class="content">
+					<ul><li><h3>참고문헌</h3></li></ul>
+				</div>	
+			</section>
+		</div>
+	</div>
+    <footer>
+        <p>&copy; 2023/07/09 by WooMin. All rights reserved.</p>
+    </footer>
+</body>
+</html>
