@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Text-based Adventure Game</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../GamePage/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
@@ -32,7 +32,9 @@
 <script type="module">
   const gameData = {
     scene1: {
-      text: "당신은 드래곤을 만났습니다. 무엇을 하시겠습니까?",
+      text: `우민은 소박한 마을에서 평온한 생활을 하며, 사랑하는 아내 아리스와 함께 소박하면서도 행복한 일상을 즐기고 있었다. 그러나 어느 날, 아리스가 무서운 병에 걸리게 되어 그의 세상은 무너지게 된다. 병의 진행은 빠르고 무자비했다. 우민은 끝없는 암흑 속에서 그저 불공평한 운명을 저주할 뿐이었다.
+
+      마을의 전설에 따르면, 이 세상 어딘가에는 던전이 있고, 그 던전의 끝에 도달하는 자는 소원을 이루어줄 수 있는 힘이 있다고 했다. 우민은 아리스를 되살리기 위해 던전을 향해 발걸음을 내디뎠다. 그의 여정은 0층, 거주가능지역에서 시작된다. 이곳은 평화롭고 조용한 초원 지역으로, 우민의 집이 위치해 있었다. 그는 기본적인 준비를 마치고 던전의 입구로 향했다. 던전의 입구는 오래된 광산인 1층으로 이어졌다. 이곳은 우민에게는 낯설고 불안한 곳이었다. 그러나 그는 던전의 깊숙한 곳에 숨겨진 소원을 이루어줄 힘을 찾아야만 했다.`,
       choices: {
         attack: { text: "공격", nextScene: "scene2", statusChange: { power: -1 }, items: ["드래곤 가죽"], limitStatus: { power: 1 }, limitItems: ["검"]},
         run: { text: "도망", nextScene: "scene3", statusChange: { speed: -1 }, limitStatus: { speed: 1 }},
