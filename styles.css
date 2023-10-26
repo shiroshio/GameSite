@@ -1,0 +1,42 @@
+
+body {
+  font-family: 'Diphylleia', selif; /* or other fantasy-style font */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, #0b3d91, #4b4e4d);
+  color: #ecf0f1;
+}
+
+#player-ui, #game-ui {
+  padding: 20px; margin: 10px; width: 400px; text-align: center;
+  border: 2px solid #34495e;
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+
+#game-ui button {
+  background-color: #3498db; /* bright blue */
+  color: #fff; /* white text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* transition effect */
+  margin: 5px;
+  font-family: 'Orbit', sans-serif;
+  font-weight: 1000;
+}
+
+#game-ui button:hover {
+  background-color: #2980b9; /* darker blue on hover */
+}
+
+#game-ui button:disabled {
+  background-color: #bdc3c7; /* gray background */
+  color: #7f8c8d; /* darker gray text */
+  cursor: not-allowed; /* indicate not clickable */
+}
