@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>캐릭터 강화하기.1.1</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content-container">
+    <div class="image-container">
+      <img id="sword" src="imgs/umarung.jpg" alt="Null Image" width="80%">
+    </div>
+    <div class="text-buttons-container">
+      <h1>캐릭터 강화하기</h1>
+      <p>강화 단계: <span id="level">0</span></p>
+      <p>성공 확률: <span id="successRate">100%</span></p>
+      <p>강화 비용: $<span id="enhanceCost">10</span></p>
+      <button id="enhanceButton" class="btn">강화하기</button>
+      <p>환원시 가격: $<span id="price">0</span></p>
+      <button id="sellButton" class="btn">돈으로 환원하기</button>
+      <p>지닌 돈: $<span id="totalMoney">0</span></p>
+      <p>지닌 조각: <span id="fragments">0</span></p>
+      <button id="toggleShopButton" class="btn">상점 창 보이기</button>
+
+      <div id="shopWindow" style="display: none;">
+        <div class="shop-item">
+          <img src="imgs/전설의 검.png" alt="Item 1">
+          <p>가격: $<span class="item-price">100</span></p>
+          <button class="buyItemButton" data-item="전설의 검" data-price="100">구매하기</button>
+        </div>
+      </div>
+
+      <div id="purchasedItems">
+        <p>구매한 아이템: </p>
+      </div>
+
+    </div>
+  </div>  
+<script></script>
+<script src="script.js"></script>
+</body>
+</html>
