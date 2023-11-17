@@ -1,0 +1,72 @@
+  /* 기본 스타일링 */
+  body {
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .content-container {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-container {
+    flex: 1;
+  }
+  .text-buttons-container {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  /* 버튼 스타일링 */
+  .btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: white;
+  }
+
+  #enhanceButton { background-color: #4CAF50; }
+  #sellButton { background-color: #f44336; }
+  #toggleShopButton { background-color: #3AAA10;}
+
+  .btn:hover {
+    background-color: #fcb69f; /* 버튼 배경색 변경 */
+    color: white; /* 텍스트 색상을 흰색으로 변경 */
+    transform: scale(1.05); /* 버튼을 약간 크게 만듦 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 그림자 효과 추가 */
+  }
+
+  /* 반응형 레이아웃 */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      box-shadow: none;
+    }
+    .image-container, .text-buttons-container {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  #shopWindow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .shop-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
