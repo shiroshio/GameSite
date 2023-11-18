@@ -1,10 +1,10 @@
   @font-face {
     font-family: 'basic-font';
-    src: url('Noto_Sans_KR/static/NotoSansKR-Regular.ttf') format('truetype');  
+    src: url('fonts/NotoSansKR-Regular.ttf') format('truetype');  
   }
   @font-face {
     font-family: 'bold-font';
-    src: url('Noto_Sans_KR/static/NotoSansKR-bold.ttf') format('truetype');
+    src: url('fonts/NotoSansKR-bold.ttf') format('truetype');
   }
 
   /* 기본 스타일링 */
