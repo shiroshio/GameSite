@@ -49,11 +49,11 @@ const sellingPrices = {
   10: Math.round(80000*100/successRates[10] + 80000),
   11: Math.round(150000*100/successRates[11] + 150000),
   12: Math.round(1000000*100/successRates[12] + 1000000),
-  13: Math.round(5432109*100/enhanceSword[13] + 5432109),
-  14: Math.round(12345678*100/enhanceSword[14] + 12345678),
+  13: Math.round(5432109*100/successRates[13] + 5432109),
+  14: Math.round(12345678*100/successRates[14] + 12345678),
 };
 const swordImages = {
-  0: 'imgs/arisu9.jpg',
+  0: 'imgs/umarung.jpg',
   1: 'imgs/hina.jpg',
   2: 'imgs/iaii.jpg',
   3: 'imgs/siro.jpg',
@@ -103,8 +103,8 @@ function toggleGuaranteedEnhanceButton() {
 }
 
 function guaranteedEnhance() {
-  if (fragments >= 200) {
-    fragments -= 200;
+  if (fragments >= 300) {
+    fragments -= 300;
     level++;
     alert('100% 확률로 강화에 성공하셨습니다!');
     updateDisplay();
