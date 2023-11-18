@@ -108,6 +108,7 @@ function guaranteedEnhance() {
     level++;
     alert('100% 확률로 강화에 성공하셨습니다!');
     updateDisplay();
+    updateSwordImage();
   }
 }
 
