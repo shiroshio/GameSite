@@ -1,5 +1,5 @@
 let level = 0;
-let money = 1000;
+let money = 10000;
 
 const successRates = {
   0: 99.99,
