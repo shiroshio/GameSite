@@ -71,7 +71,10 @@ const swordImages = {
 };
 const maxLevel = 14; // Set the maximum enhancement level
 
+const SwordValue = 9;
+
 let fragments = 0;
+let inventory = {};
 
 function updateDisplay() {
   document.getElementById('level').textContent = level;
@@ -81,8 +84,9 @@ function updateDisplay() {
   document.getElementById('totalMoney').textContent = money;
   document.getElementById('enhanceButton').disabled = money < getEnhancementCost();
   document.getElementById('fragments').textContent = fragments;
-  toggleGuaranteedEnhanceButton();
   document.getElementById('enhanceButton').style.display = level < maxLevel ? 'inline' : 'none';
+  document.getElementById('legendarySwordBonus').textContent = calculateSwordBonus();
+  toggleGuaranteedEnhanceButton();
 }
 
 function toggleGuaranteedEnhanceButton() {
@@ -100,6 +104,11 @@ function toggleGuaranteedEnhanceButton() {
       guaranteedButton.remove();
     }
   }
+}
+
+function calculateSwordBonus() {
+  const numberOfLegendarySwords = inventory['전설의 검'] || 0;
+  return numberOfLegendarySwords * SwordValue;
 }
 
 function guaranteedEnhance() {
@@ -133,6 +142,9 @@ function enhanceSword() {
   if (level < maxLevel) {
     const enhancementCost = getEnhancementCost();
     if (money >= enhancementCost) {
+      const SwordBonus = calculateSwordBonus();
+      money += SwordBonus;
+
       money -= enhancementCost;
       const currentSuccessRate = getSuccessRate();
       if (Math.random() * 100 < currentSuccessRate) {
@@ -181,9 +193,6 @@ document.getElementById('toggleShopButton').addEventListener('click', function()
   shopWindow.style.display = shopWindow.style.display === 'none' ? 'block' : 'none';
 });
 
-// 인벤토리 객체를 초기화합니다.
-let inventory = {};
-
 // 인벤토리를 문자열로 변환하는 함수를 추가합니다.
 function inventoryToString() {
   return Object.entries(inventory).map(([item, quantity]) => `${item} ${quantity}`).join(', ');
@@ -210,6 +219,7 @@ document.querySelectorAll('.buyItemButton').forEach(button => {
     } else {
       alert('돈이 부족합니다.');
     }
+    updateDisplay();
   });
 });
 
