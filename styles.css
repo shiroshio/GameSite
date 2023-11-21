@@ -47,6 +47,21 @@
   #enhanceButton { background-color: #4CAF50; }
   #sellButton { background-color: #f44336; }
   #toggleShopButton { background-color: #3AAA10;}
+  #guaranteedEnhanceButton { 
+    background-color: #2AAA10;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: white;
+  }
+  #guaranteedEnhanceButton:hover {
+    color: white; /* 텍스트 색상을 흰색으로 변경 */
+    transform: scale(1.05); /* 버튼을 약간 크게 만듦 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 그림자 효과 추가 */
+  }
 
   .btn:hover {
     background-color: #fcb69f; /* 버튼 배경색 변경 */
